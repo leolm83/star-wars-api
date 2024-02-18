@@ -5,6 +5,10 @@ import com.leolmcoding.starwarsapi.domain.repositories.PlanetRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -12,13 +16,16 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import static com.leolmcoding.starwarsapi.commons.PlanetConstants.PLANET;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest(classes = PlanetService.class)
+//@SpringBootTest(classes = PlanetService.class)
+@ExtendWith(MockitoExtension.class)
 @Slf4j
 public class PlanetServiceTest {
-    @Autowired
+    //@Autowired
+    @InjectMocks
     private PlanetService planetService;
 
-    @MockBean
+    //@MockBean
+    @Mock
     private PlanetRepository planetRepository;
 
     // operacao_estado_retorno
