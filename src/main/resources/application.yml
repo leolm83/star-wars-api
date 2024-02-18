@@ -1,0 +1,8 @@
+spring:
+    datasource:
+        url: jdbc:mysql://localhost/star-wars
+        username: development
+        password: development
+    jpa:
+        hibernate:
+            ddl-auto: update
